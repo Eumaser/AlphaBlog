@@ -6,7 +6,7 @@
     <header>
       <a href="<?php the_permalink(); ?>" class="theBigIndex">  <h1> <?php the_title() ?> </h1></a>
       <small><p>
-          Author: <strong> <?php the_author(); ?></strong> Category: <span class="theSmallIndex"><?php the_category(','); ?> </span>
+          Author: <strong> <?php /*the_author()*/ the_author_posts_link();?></strong> Category: <span class="theSmallIndex"><?php the_category(','); ?> </span>
           Date: <?php the_time(Y .'-'. m. '-'. d. ' '.T)?>
         <br> <span class="theSmallIndex"><?php the_tags(); ?> </span>
       </p></small>
