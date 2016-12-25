@@ -2,14 +2,12 @@
 
 <?php
 /*
+//Template Name: Home Page
   page template for the Home page
 */
  ?>
 
 <?php get_header(); ?>
-
-
-
 
   <div class="row">
     <div class="col-xs-12 col-md-9">
