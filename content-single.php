@@ -15,21 +15,14 @@
           <div class="featureImage text-center">
             <?php if(has_post_thumbnail() ){
                   the_post_thumbnail('medium');
-
             }
             ?>
-
 
           </div>
           <div class="borderImage">
             <?php the_content() ?>
-
           </div>
-
       </article>
-
     </div>
   </div>
-
-
 </div>

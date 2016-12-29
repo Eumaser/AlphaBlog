@@ -1,8 +1,5 @@
-
 <?php
-/*
   //Template Name: Contact Page
-*/
  ?>
 
 <?php get_header(); ?>
@@ -11,9 +8,7 @@
   $listError = array();
   $leEmpty = true;
 
-
 if(isset($_POST['submit']) ){
-
       $name = $_POST['messageName'];
       $email = $_POST['email'];
       $inquiry = $_POST['inquiry'];
@@ -37,7 +32,6 @@ if(isset($_POST['submit']) ){
         array_push($listError, "Email too long.");
       }
 
-
       if(empty($inquiry)){
         array_push($listError, "Inquiry is required");
       }elseif (strlen($inquiry)>750) {
@@ -58,8 +52,6 @@ if(isset($_POST['submit']) ){
   }
 
 ?>
-
-
 
 <div class="container">
   <div class="row">

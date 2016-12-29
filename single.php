@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-md-8 singlephp">
         <?php while (have_posts() ):the_post(); ?>
           <?php  get_template_part('content','single' );  ?>
-        <div class="row ">
+        <div class="row postlinks">
             <div class="col-md-6 text-left">
 
               <button type="button" name="button" class="btn btn-default"><?php previous_post_link('&laquo %link', 'Previous Post') ?></button>

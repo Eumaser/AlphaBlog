@@ -1,13 +1,7 @@
 <?php
 /**
  * The template for displaying comments
- *
- * The area of the page that contains both current comments
- * and the comment form.
- *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+
  */
 
 /*
@@ -15,6 +9,7 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
+
 if ( post_password_required() ) {
 	return;
 }
@@ -52,7 +47,6 @@ if ( post_password_required() ) {
     'cancel_reply_link' => __( 'Cancel Reply' ),
     'label_submit'      => __( 'Post Comment' ),
 
-
   'comment_field' =>  '<textarea id="comment" name="comment" cols="45" rows="8" class="form-control" aria-required="true"> </textarea>' ,
 
   'logged_in_as' => ''
@@ -60,8 +54,6 @@ if ( post_password_required() ) {
 
   comment_form($cargs);
  ?>
-
-<!---<button type="button" name="button" class="btn btn-default"><i class="fa fa-envelope-o fa-fw"></i> test</button>--->
 
  <script>
    document.getElementById("submit").className += " btn btn-primary";

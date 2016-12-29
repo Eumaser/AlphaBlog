@@ -1,10 +1,7 @@
 <?php
-
-/*
-=================
+/*=================
 Theme Setup
-=================
-*/
+=================*/
 
 function alphaBlog_setup(){
 
@@ -20,7 +17,6 @@ function alphaBlog_setup(){
     'status',
     'audio',
     'chat'
-
   ));
 
   add_theme_support('post-thumbnails');
@@ -48,12 +44,9 @@ function alphaBlog_setup(){
 
 add_action('after_setup_theme', 'alphaBlog_setup');
 
-
-/*
-=================
+/*=================
 Widget Setup
-=================
-*/
+=================*/
 
 function alphaBlog_widgets() {
   register_sidebar(array(
@@ -64,42 +57,30 @@ function alphaBlog_widgets() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-
-
   ));
 
 }
 add_action('widgets_init','alphaBlog_widgets');
 
-/*
-=================
+/*=================
 Styles and scripts Setup
-=================
-*/
+=================*/
 
 function alphaBlog_styles() {
     wp_enqueue_style('nunito-sans', 'https://fonts.googleapis.com/css?family=Nunito+Sans', array(), null );
-
-  //	wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), '3.3.7');
-//    wp_enqueue_style('font-awesome', get_template_directory_uri().'/css/font_awesome/css/font-awesome.css', array(), '4.7.0');
     wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7');
     wp_enqueue_style('font-awesome', 'https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css', array(), '4.7.0');
-
     wp_enqueue_style('alpha_style',	 get_stylesheet_uri() );
 
-    //wp_enqueue_script('alphaBlog_js',get_template_directory_uri().'/js/bootstrap.js',array(), '3.3.7');
-    wp_enqueue_script('alphaBlog_js','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',array(), '3.3.7');
+    wp_enqueue_script('alphaBlog_js',get_template_directory_uri().'/js/bootstrap.js',array(), '3.3.7', true);
 
 }
 
 add_action('wp_enqueue_scripts','alphaBlog_styles');
 
-
-/*
-=================
+/*=================
 Customize the comment list wp_comment_list
-=================
-*/
+=================*/
 
 function alphaBlog_comment($comment, $args, $depth) {
     if ( 'div' === $args['style'] ) {
@@ -148,35 +129,24 @@ function alphaBlog_comment($comment, $args, $depth) {
     <?php
     }
 
-
-
-
-
-
-/*
-=======================
+/*=======================
 email SMTP function
-=======================
-*/
+=======================*/
 
 add_action( 'phpmailer_init', 'mailer_config', 10, 1);
 
 function mailer_config(PHPMailer $mailer){
       $mailer->IsSMTP();
-      $mailer->Host = "smtp.google.com"; // your SMTP server
+    //  $mailer->Host = "smtp.google.com"; // your SMTP server
       $mailer->SMTPAuth = true;
-    //  $mailer->SMTPDebug = 0; // write 0 if you don't want to see client/server communication in page
-    //  $mailer->Debugoutput = 'html';
+      $mailer->SMTPDebug = 2; // write 0 if you don't want to see client/server communication in page
+      $mailer->Debugoutput = 'html';
 
       $mailer->Port = 465;
       $mailer->SMTPSecure = 'ssl';
       $mailer->Host= 'smtp.gmail.com';
-      $mailer->Username = ''; //email
-      $mailer->Password = ''; //email password
+      $mailer->Username = 'thetestmail111@gmail.com'; //email
+      $mailer->Password = 'mailtest11'; //email password
 }
-//add_action( 'phpmailer_init', 'mailer_config', 10, 1);
-
-
-
 
  ?>
