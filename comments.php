@@ -23,34 +23,14 @@ if ( post_password_required() ) {
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
+			<ol class="comment-list">
+				<?php wp_list_comments('type=comment&callback=alphaBlog_comment&avatar_size=80'); ?>
+			</ol>
 
-
-
-
-		<ol class="comment-list">
-			<?php
-			/*	wp_list_comments( array(
-					'style'       => 'ul',
-					'short_ping'  => true,
-					'avatar_size' => 42,
-
-
-				) );	*/
-			?>
-		</ol><!-- .comment-list -->
-
-		<ol class="comment-list">
-			<?php wp_list_comments('type=comment&callback=alphaBlog_comment&avatar_size=80'); ?>
-		</ol>
-
-
-		<?php the_comments_navigation(); ?>
-    <div class="text-center">
-      <?php paginate_comments_links(); ?>
-    </div>
-
-
-
+			<?php the_comments_navigation(); ?>
+	    <div class="text-center">
+	      <?php paginate_comments_links(); ?>
+	    </div>
 	<?php endif; // Check for have_comments(). ?>
 
 	<?php
@@ -59,9 +39,6 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.' ); ?></p>
 	<?php endif; ?>
-
-
-
 
 <?php
   $cargs = array(
@@ -82,15 +59,11 @@ if ( post_password_required() ) {
   );
 
   comment_form($cargs);
-
-
  ?>
 
 <!---<button type="button" name="button" class="btn btn-default"><i class="fa fa-envelope-o fa-fw"></i> test</button>--->
 
  <script>
    document.getElementById("submit").className += " btn btn-primary";
-
-
  </script>
 </div>

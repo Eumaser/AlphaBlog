@@ -225,6 +225,9 @@ textarea#comment{
   padding-bottom:10px;
 }
 
+
+
+/*In contact form, change color to either success or error when sending email via the form*/
 .success{
   color: green;
   border: 1px solid green;
@@ -237,4 +240,12 @@ textarea#comment{
   border: 1px solid red;
   margin-bottom: 10px;
 
+}
+
+
+
+/*Add border to all images*/
+.borderImage img:first-child{
+  border: 3px solid black;
+  color: red;
 }

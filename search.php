@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-
-
-
 <?php  if(have_posts() ): ?>
   <div class="row">
     <div class="col-xs-12 col-md-8">
@@ -9,9 +6,7 @@
         <h3>Search result for: <strong> <?php the_search_query(); ?></strong></h3>
       </div>
         <?php while (have_posts() ):the_post(); ?>
-
             <?php  get_template_part('content','search' );  ?>
-
         <?php endwhile?>
 
       <div class="row text-center">
@@ -29,6 +24,5 @@
         </div>
     </div>
 <?php endif?>
-
 
 <?php get_footer(); ?>

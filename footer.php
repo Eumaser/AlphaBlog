@@ -1,7 +1,6 @@
 
   <div id="theFooter">
     <footer>
-
       <div class="row">
         <div class="col-md-3 offset">
 
@@ -21,10 +20,6 @@
           <h3>Alpha blog theme</h3>
           Powered by:<a href="https://wordpress.org" /><i class="fa fa-wordpress fa-2x" aria-hidden="true"></i></a><br>
           AlphaBlog &#169 <?php echo the_date('Y') ?>
-
-
-
-
         </div>
         <div class="col-md-3 offset">
 
@@ -33,8 +28,6 @@
       </div>
     </footer>
   </div>
-
-
 </div>
 
 <!--- <? /*php wp_footer();*/ ?> -->

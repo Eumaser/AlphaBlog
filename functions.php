@@ -80,11 +80,15 @@ Styles and scripts Setup
 function alphaBlog_styles() {
     wp_enqueue_style('nunito-sans', 'https://fonts.googleapis.com/css?family=Nunito+Sans', array(), null );
 
-  	wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), '3.3.7');
-    wp_enqueue_style('font-awesome', get_template_directory_uri().'/css/font_awesome/css/font-awesome.css', array(), '4.7.0');
+  //	wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), '3.3.7');
+//    wp_enqueue_style('font-awesome', get_template_directory_uri().'/css/font_awesome/css/font-awesome.css', array(), '4.7.0');
+    wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7');
+    wp_enqueue_style('font-awesome', 'https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css', array(), '4.7.0');
+
     wp_enqueue_style('alpha_style',	 get_stylesheet_uri() );
 
-    wp_enqueue_script('alphaBlog_js',get_template_directory_uri().'/js/bootstrap.js',array(), '3.3.7');
+    //wp_enqueue_script('alphaBlog_js',get_template_directory_uri().'/js/bootstrap.js',array(), '3.3.7');
+    wp_enqueue_script('alphaBlog_js','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',array(), '3.3.7');
 
 }
 
@@ -154,6 +158,7 @@ function alphaBlog_comment($comment, $args, $depth) {
 email SMTP function
 =======================
 */
+
 add_action( 'phpmailer_init', 'mailer_config', 10, 1);
 
 function mailer_config(PHPMailer $mailer){

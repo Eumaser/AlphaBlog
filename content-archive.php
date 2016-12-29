@@ -1,6 +1,3 @@
-
-
-
 <div class="panel panel-default blogWrapper">
   <div class="panel-heading">
     <header>

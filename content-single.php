@@ -21,8 +21,10 @@
 
 
           </div>
+          <div class="borderImage">
+            <?php the_content() ?>
 
-          <?php the_content() ?>
+          </div>
 
       </article>
 

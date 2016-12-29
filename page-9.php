@@ -1,5 +1,4 @@
 
-
 <?php
 /*
 //Template Name: Home Page
@@ -28,7 +27,7 @@
       <?php
       $args = array(
           'type' => 'post',
-          'category' => 'News',
+          'category_name' => 'News',
           'posts_per_page' => 4,
 
       );

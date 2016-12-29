@@ -1,20 +1,15 @@
 
-
 <?php
 /*
   //Template Name: Contact Page
 */
  ?>
 
-
-
-
-
 <?php get_header(); ?>
 
 <?php
   $listError = array();
-    $leEmpty = true;
+  $leEmpty = true;
 
 
 if(isset($_POST['submit']) ){
@@ -60,9 +55,6 @@ if(isset($_POST['submit']) ){
         }
 
       }
-
-
-
   }
 
 ?>
@@ -96,7 +88,6 @@ if(isset($_POST['submit']) ){
                 </div>
               <?php endif ?>
 
-
               <?php  if(empty($listError) && $leEmpty == false ): ?>
                 <div class="success">
                     <?php echo $success ?>
@@ -117,20 +108,12 @@ if(isset($_POST['submit']) ){
                   <div class="form-group">
                     <input type="submit" name="submit" value="submit" class="btn btn-default">
                   </div>
-
-
-
                 </form>
               </div>
 
               </div>
-
-
         <?php endwhile?>
       <?php endif ?>
-
-
-
     </div>
   </div>
 </div>
